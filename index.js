@@ -7,7 +7,14 @@ function fetchBook(event){
     .then((res) => res.json())
     .then((data) => {
         resultado.innerHTML = `
-        <span class="text-white text-2xl">${data.q}</span>
-        <span class="text-white text-2xl">${data.docs.author_name}</span>`
+        <div>
+            <span class="text-white text-2xl">Nome do Livro</span>
+            <span class="text-white text-2xl">${data.q}</span>
+        </div>
+        <div>
+            <span class="text-white text-2xl">Nome do(a) autor(a)</span>
+            <span class="text-white text-2xl">${data.docs.author_name}</span>
+        </div>
+        `
     })
 }
